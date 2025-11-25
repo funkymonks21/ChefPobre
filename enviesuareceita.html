@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozinha Pobre - Receitas Econômicas</title>    
+    <!-- Fontes do Google, usada no logo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Barriecito&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <!--Para icones de rede social-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="marca">
+            <img src="img/logopng.png" alt="Logo Chapéu de Chef" class="logo-img">
+            <a href="index.html" class="titulo">Chef Pobre</a>
+        </div>
+
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="cafedamanha.html">Café da Manhã</a></li>
+                <li><a href="almoco.html">Almoço</a></li>
+                <li><a href="jantarromantico.html">Jantar</a></li> 
+            </ul>
+        </nav>
+
+        <div class="acoes-header">
+            <div class="redes-sociais">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="botoes">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="enviesuareceita.html" class="btn btn-receita">Envie sua Receita</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-centralizado">            
+        <section class="form-container form-largo">
+            <h1>Envie sua Obra de Arte</h1>
+            <p>Ajude a comunidade a comer bem gastando pouco!</p>
+            <form action="index.html" class="formulario-padrao">
+                <fieldset>
+                    <legend>Sobre o Prato</legend>                    
+                    <div class="campo">
+                        <label for="nome-receita">Nome da Receita:</label>
+                        <input type="text" id="nome-receita" placeholder="Ex: Escondidinho de Carne Seca" required>
+                    </div>
+                    <div class="duas-colunas">
+                        <div class="campo">
+                            <label for="categoria">Categoria:</label>
+                            <select id="categoria" required>
+                                <option value="" disabled selected>Selecione...</option>
+                                <option value="cafe">Café da Manhã</option>
+                                <option value="almoco">Almoço</option>
+                                <option value="jantar">Jantar</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="foto">Foto do Prato:</label>
+                            <input type="file" id="foto" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="duas-colunas">
+                        <div class="campo">
+                            <label for="porcoes">Rende (porções):</label>
+                            <input type="number" id="porcoes" placeholder="Ex: 4" min="1">
+                        </div>
+                        <div class="campo">
+                            <label for="custo-total">Custo Total (R$):</label>
+                            <input type="number" id="custo-total" placeholder="Ex: 25.00" step="0.50">
+                        </div>
+                    </div>                    
+                    <div class="campo">
+                        <label for="descricao">Descrição Breve:</label>
+                        <textarea id="descricao" rows="3" placeholder="Conte um pouco da história desse prato..."></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Ingredientes e Custos</legend>
+                    <p class="aviso-form">Preencha os 5 principais ingredientes.</p>
+                    <div class="linha-ingrediente header-ingrediente">
+                        <span>Ingrediente</span>
+                        <span>Qtd.</span>
+                        <span>Custo (R$)</span>
+                    </div>
+                        <div class="linha-ingrediente">
+                        <input type="text" placeholder="Nome" required>
+                        <input type="text" placeholder="Ex: 200g">
+                        <input type="number" placeholder="0.00">
+                    </div>
+                    <div class="linha-ingrediente">
+                        <input type="text" placeholder="Nome">
+                        <input type="text" placeholder="Qtd">
+                        <input type="number" placeholder="0.00">
+                    </div>
+                    <div class="linha-ingrediente">
+                        <input type="text" placeholder="Nome">
+                        <input type="text" placeholder="Qtd">
+                        <input type="number" placeholder="0.00">
+                    </div>
+                    <div class="linha-ingrediente">
+                        <input type="text" placeholder="Nome">
+                        <input type="text" placeholder="Qtd">
+                        <input type="number" placeholder="0.00">
+                    </div>
+                    <div class="linha-ingrediente">
+                        <input type="text" placeholder="Nome">
+                        <input type="text" placeholder="Qtd">
+                        <input type="number" placeholder="0.00">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Modo de Preparo</legend>                    
+                    <div class="campo">
+                        <label>Passo 1:</label>
+                        <textarea rows="2" placeholder="Comece por aqui..." required></textarea>
+                    </div>
+                    <div class="campo">
+                        <label>Passo 2:</label>
+                        <textarea rows="2" placeholder="E depois..."></textarea>
+                    </div>
+                    <div class="campo">
+                        <label>Passo 3:</label>
+                        <textarea rows="2" placeholder="Quase lá..."></textarea>
+                    </div>
+                    <div class="campo">
+                        <label>Passo 4 (Finalização):</label>
+                        <textarea rows="2" placeholder="Como servir..."></textarea>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn btn-receita btn-full">Enviar Receita para Análise</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Cozinha Pobre - Receitas acessíveis para todos.</p>
+            <nav class="menu-footer">
+                <a href="sobre_nos.html">Sobre Nós</a>
+                <a href="mapa_do_site.html">Mapa do Site</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
+
+  

@@ -1,0 +1,320 @@
+/* Variáveis */
+:root {
+    --cor-texto: #40513b;        
+    --cor-fundo-header: #edf1d6; 
+    --cor-fundo-body: #fafafa;   
+    --cor-fundo-footer: #40513b; 
+    --cor-texto-footer: #edf1d6; 
+    --cor-botao-receita: #eebc4e; 
+    --cor-botao-login: #9dc08b;   
+    --cor-hover: #609966;         
+    
+    --fonte-titulo: 'Barriecito', cursive;
+    --fonte-receita: 'Amatic SC', cursive;
+    --fonte-corpo: 'Nunito', sans-serif;
+}
+
+html{
+    background-color: #d8dec0;
+     display: flex; 
+    justify-content: center; 
+    min-height: 100vh; 
+    width: 100%; 
+}
+
+body {
+    background-color: var(--cor-fundo-body);
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    width: 70%;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    
+    /* footer fixo no fim do site */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+main {
+    /* para deixar o main no centro, empurrando o footer para baixo da tela */
+    flex: 1; 
+}
+
+main h1, main h2, main h3 {
+    font-family: var(--fonte-receita);
+    color: var(--cor-texto); 
+    font-weight: normal; 
+}
+
+main h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    border-bottom: 2px dashed #ccc; /* "sublinhado" decorativo */
+    padding-bottom: 10px;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: var(--cor-botao-receita);
+    margin-top: 30px;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: var(--cor-fundo-header);
+    border-bottom: 3px solid var(--cor-texto);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.marca { display: flex; align-items: center; gap: 15px; }
+.logo-img { width: 60px; height: auto; }
+.titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 2.2rem;
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin: 0;
+    letter-spacing: 1px;
+}
+/* estilos para o menu de navegação */
+.menu-principal ul { display: flex; list-style: none; padding: 0; margin: 0; gap: 20px; }
+.menu-principal a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+.menu-principal a:hover { color: var(--cor-hover); text-decoration: underline; }
+/* estilos para as ações do header (redes sociais e botões) */
+.acoes-header { display: flex; align-items: center; gap: 20px; }
+.redes-sociais { display: flex; gap: 10px; }
+.redes-sociais a { color: var(--cor-texto); font-size: 1.5rem; transition: transform 0.2s; } /* transição para os icones de redes sociais */
+.redes-sociais a:hover { transform: scale(1.2); color: var(--cor-botao-receita); }
+/* estilos para os botões do modelo e site em geral*/
+.botoes { display: flex; gap: 10px; }
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s, transform 0.2s; /* transição suabe para os botões */
+    border: 2px solid transparent;
+}
+.btn-login { border: 2px solid var(--cor-texto); color: var(--cor-texto); }
+.btn-login:hover { background-color: var(--cor-texto); color: #fff; } /* inverte as cores ao passar o mouse */
+.btn-receita { background-color: var(--cor-botao-receita); color: var(--cor-texto); box-shadow: 2px 2px 0px var(--cor-texto); }
+.btn-receita:hover { background-color: #d4a63e; transform: translateY(-2px); } /* sobe o botão ao passar o mouse */
+
+/* estilo para o rodapé */
+footer {
+    background-color: var(--cor-fundo-footer);
+    color: var(--cor-texto-footer);
+    padding: 20px 0;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-footer a {
+    color: var(--cor-texto-footer);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+/* estilo para rodapé hover*/
+.menu-footer a:hover {
+    text-decoration: underline;
+    color: var(--cor-botao-receita);
+}
+
+/* cadastro e login */
+
+.container-centralizado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     
+    min-height: 100%;   
+}
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border: 2px dashed #ccc; /* Borda pontilhada e fundo branco estilo caderno */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form-container h1 {
+    font-family: var(--fonte-receita); 
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+.formulario-padrao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1rem; 
+}
+
+.campo input, .campo textarea, .campo select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--fonte-corpo); 
+    font-size: 1rem;
+    box-sizing: border-box; /* Garantindo que o padding não estoure a box */
+}
+
+.campo input:focus {
+    border-color: var(--cor-botao-receita); /* muda a cor quando clica*/
+    outline: none;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.acoes-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.link-esqueci {
+    color: #888;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.link-esqueci:hover {
+    color: var(--cor-botao-receita);
+    text-decoration: underline;
+}
+
+.rodape-form {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.rodape-form a {
+    color: var(--cor-texto);
+    font-weight: bold;
+}
+/* estilo para o form de receita */
+.form-largo {
+    max-width: 800px; 
+}
+
+fieldset {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #fcfcfc;
+}
+
+legend {
+    font-family: var(--fonte-receita); 
+    font-size: 1.5rem;
+    color: var(--cor-botao-receita);
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.duas-colunas {
+    display: flex;
+    gap: 20px;
+}
+.duas-colunas .campo {
+    flex: 1; /* Faz os dois ocuparem o mesmo tamanho */
+}
+
+.linha-ingrediente {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; 
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.header-ingrediente {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+    margin-bottom: 5px;
+}
+
+.campo-checkbox {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.campo-checkbox input {
+    width: 20px;
+    height: 20px;
+}
+/* responsividade */
+@media (max-width: 900px) {
+    header { flex-direction: column; gap: 20px; padding: 20px; }
+    .menu-principal ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    /* corpo volta a ocupar toda a tela */
+    body {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+    }
+}
+
+
+/* impressão */
+@media print {
+    header, footer, .botoes-sociais { display: none; }
+    body { background-color: white; color: black; }
+}
