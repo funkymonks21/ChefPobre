@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozinha Pobre - Receitas Econômicas</title>    
+    <!-- Fontes do Google, usada no logo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Barriecito&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <!--Para icones de rede social-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="marca">
+            <img src="img/logopng.png" alt="Logo Chapéu de Chef" class="logo-img">
+            <a href="index.html" class="titulo">Chef Pobre</a>
+        </div>
+
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="cafedamanha.html">Café da Manhã</a></li>
+                <li><a href="almoco.html">Almoço</a></li>
+                <li><a href="jantarromantico.html">Jantar</a></li> 
+            </ul>
+        </nav>
+
+        <div class="acoes-header">
+            <div class="redes-sociais">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="botoes">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="enviesuareceita.html" class="btn btn-receita">Envie sua Receita</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">            
+        <article class="receita-conteudo">
+            <header class="card-receita-pop">
+                <div class="info-lado-esquerdo">
+                    <span class="tag-categoria">Café da Manhã</span>
+
+                    <div class="titulo-pop-container">
+                        <h1>Panquecas Americanas</h1>
+                    </div>
+                    <div class="meta-dados">
+                        <div class="custo-box">
+                            <strong>Custo:</strong> R$ 12,50 <small>(R$ 3,10/porção)</small>
+                        </div>
+                        <div class="estrelas-pop">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(45 votos)</span>
+                        </div>
+                    </div>
+                    <p class="intro-texto">
+                        A receita clássica, fofinha e perfeita para começar o dia com energia e economia!
+                    </p>
+                </div>
+                <div class="foto-pop">
+                    <img src="img/panqueca-americana.jpg" alt="Panquecas americanas baratas">
+                </div>
+            </header>
+            <section class="secao-lista fundo-ingredientes">
+                <h2 class="titulo-faixa">Ingredientes</h2>                
+                <ul class="lista-checkbox">
+                    <li>
+                        <input type="checkbox" id="ing1">
+                        <label for="ing1">
+                            Farinha de Trigo (2 xícaras)
+                            <span class="preco-ingrediente">(R$ 2,50)</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ing2">
+                        <label for="ing2">
+                            Leite Integral (1 xícara)
+                            <span class="preco-ingrediente">(R$ 1,20)</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ing3">
+                        <label for="ing3">
+                            Ovos (2 unidades)
+                            <span class="preco-ingrediente">(R$ 1,00)</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ing4">
+                        <label for="ing4">
+                            Açúcar e Sal (a gosto)
+                            <span class="preco-ingrediente">(R$ 0,30)</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ing5">
+                        <label for="ing5">
+                            Manteiga ou Óleo
+                            <span class="preco-ingrediente">(R$ 0,50)</span>
+                        </label>
+                    </li>
+                </ul>
+            </section>
+            <section class="secao-lista fundo-preparo">
+                <h2 class="titulo-faixa">Como Fazer</h2>
+
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FE3xJG_NTLw?si=oVyEk2_yHOIN6ltZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <ol class="lista-numerada">
+                    <li>
+                        Em uma tigela grande, misture a farinha, o açúcar, o fermento e o sal.
+                    </li>
+                    <li>
+                        Em outro recipiente, misture o leite, os ovos e a manteiga derretida.
+                    </li>
+                    <li>
+                        Despeje os líquidos nos secos e misture levemente (não bata muito para não solar a massa).
+                    </li>
+                    <li>
+                        Aqueça a frigideira untada com um pouco de óleo e despeje uma concha da massa. Quando fizer bolhas em cima, vire.
+                    </li>
+                </ol>
+            </section>
+
+        </article>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Cozinha Pobre - Receitas acessíveis para todos.</p>
+            <nav class="menu-footer">
+                <a href="sobre_nos.html">Sobre Nós</a>
+                <a href="mapa_do_site.html">Mapa do Site</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
+
+  

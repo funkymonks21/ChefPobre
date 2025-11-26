@@ -300,6 +300,291 @@ legend {
     width: 20px;
     height: 20px;
 }
+
+/* --- CONTAINER DO HEADER (GRID) --- */
+.card-receita-pop {
+    display: grid;
+    /* 45% texto, 55% foto. O texto precisa ser larguinho para o titulo caber bem */
+    grid-template-columns: 45% 55%; 
+    
+    background-color: #fff;
+    border: 3px solid var(--cor-texto); /* Borda verde grossa */
+    border-radius: 12px; /* Cantos arredondados */
+    margin-bottom: 50px;
+    
+    /* Configuração para camadas (z-index) funcionarem */
+    position: relative; 
+    
+    /* Sombra sólida deslocada (efeito Pop/Cartoon) */
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.15); 
+    overflow: hidden; /* Garante que nada vaze das bordas arredondadas */
+}
+
+/* --- LADO ESQUERDO (TEXTO) --- */
+.info-lado-esquerdo {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    
+    /* IMPORTANTE: Isso garante que o texto fique POR CIMA da foto na sobreposição */
+    z-index: 10; 
+}
+
+/* A Tag "Café da Manhã" */
+.tag-categoria {
+    display: inline-block;
+    background-color: var(--cor-texto); /* Verde Escuro */
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    align-self: flex-start; /* Alinha à esquerda */
+}
+
+/* --- O TÍTULO SOBREPOSTO (A Mágica) --- */
+.titulo-pop-container h1 {
+    font-family: var(--fonte-receita); /* Fonte Amatic SC */
+    font-size: 4rem; /* Bem grande */
+    line-height: 1;
+    color: #fff; /* Texto Branco */
+    
+    /* O Fundo Amarelo */
+    background-color: var(--cor-botao-receita); 
+    padding: 10px 20px;
+    
+    /* Sombra Sólida no Texto (Legibilidade e Estilo) */
+    text-shadow: 3px 3px 0px var(--cor-texto); 
+    
+    /* TRUQUE DA SOBREPOSIÇÃO: */
+    /* Margem negativa à direita puxa a caixa para cima da foto vizinha */
+    margin-right: -80px; 
+    
+    /* Sombra na caixa amarela */
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.15);
+    
+    /* Leve rotação para ficar descolado */
+    transform: rotate(-1.5deg); 
+    
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Informações abaixo do título */
+.meta-dados {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.custo-box {
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+    font-family: var(--fonte-corpo);
+}
+
+.estrelas-pop {
+    color: var(--cor-botao-receita); /* Estrelas Amarelas */
+    font-size: 1.3rem;
+}
+
+.estrelas-pop span {
+    color: #666; /* Cor do texto "(45 votos)" */
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.intro-texto {
+    margin-top: 20px;
+    font-family: var(--fonte-corpo); /* Nunito */
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* --- LADO DIREITO (FOTO) --- */
+.foto-pop {
+    position: relative;
+    height: 100%;
+    min-height: 450px; /* Garante altura para o banner */
+    border-left: 3px solid var(--cor-texto);
+    
+    /* Fica atrás do título (z-index menor que o do texto) */
+    z-index: 1; 
+}
+
+.foto-pop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Corta a imagem para preencher sem esticar */
+    display: block;
+}
+
+
+/* =========================================
+   SEÇÕES DE LISTAS (Ingredientes e Preparo)
+   ========================================= */
+
+.secao-lista {
+    border: 3px solid var(--cor-texto);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+/* Títulos das Faixas (Amarelo com texto Verde) */
+.titulo-faixa {
+    background-color: var(--cor-botao-receita);
+    color: var(--cor-texto);
+    font-family: var(--fonte-receita);
+    font-size: 2.8rem;
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--cor-texto);
+}
+
+/* Fundo Verde Claro para Ingredientes */
+.fundo-ingredientes {
+    background-color: #d6e4c8; 
+}
+
+/* Fundo Branco para Modo de Preparo */
+.fundo-preparo {
+    background-color: #fff;
+}
+
+
+/* --- LISTA DE INGREDIENTES (Checkbox) --- */
+.lista-checkbox {
+    list-style: none;
+    padding: 25px 40px;
+    margin: 0;
+}
+
+.lista-checkbox li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lista-checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--cor-texto);
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.lista-checkbox input[type="checkbox"]:checked {
+    background-color: var(--cor-texto);
+}
+
+.lista-checkbox input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: #fff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+}
+
+.lista-checkbox label {
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: var(--fonte-corpo);
+}
+
+.preco-ingrediente {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin-left: 8px;
+}
+
+/* Efeito de Riscado */
+.lista-checkbox input:checked + label {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.7;
+}
+
+
+/* --- VÍDEO --- */
+.video-container {
+    background-color: var(--cor-botao-login); /* Verde médio */
+    padding: 30px;
+    border-bottom: 3px solid var(--cor-texto);
+    display: flex;
+    justify-content: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    border: 3px solid var(--cor-texto);
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+}
+
+
+/* --- LISTA NUMERADA ESTILOSA (Amarela) --- */
+.lista-numerada {
+    list-style: none; /* Remove numeração padrão */
+    counter-reset: contador-passos; /* Inicia contador */
+    padding: 30px 40px;
+    margin: 0;
+}
+
+.lista-numerada li {
+    position: relative;
+    padding-left: 65px; /* Espaço para o quadrado amarelo */
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: var(--fonte-corpo);
+}
+
+/* O Quadrado Amarelo (Pseudo-elemento) */
+.lista-numerada li::before {
+    counter-increment: contador-passos; /* Soma +1 */
+    content: counter(contador-passos);  /* Escreve o número */
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    width: 45px;
+    height: 45px;
+    
+    background-color: var(--cor-botao-receita); /* Fundo Amarelo */
+    color: var(--cor-texto); /* Texto Verde */
+    border: 2px solid var(--cor-texto);
+    
+    /* Centralização do número */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: var(--fonte-receita);
+    font-size: 1.8rem;
+    font-weight: bold;
+    
+    /* Sombra sólida */
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.15);
+}
+
 /* responsividade */
 @media (max-width: 900px) {
     header { flex-direction: column; gap: 20px; padding: 20px; }
