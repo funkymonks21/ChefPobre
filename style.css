@@ -13,7 +13,7 @@
     --fonte-receita: 'Amatic SC', cursive;
     --fonte-corpo: 'Nunito', sans-serif;
 }
-
+/* geral */
 html{
     background-color: #d8dec0;
      display: flex; 
@@ -44,6 +44,7 @@ main {
     flex: 1; 
 }
 
+/* para todos os titulos e subtitulos */
 main h1, main h2, main h3 {
     font-family: var(--fonte-receita);
     color: var(--cor-texto); 
@@ -63,7 +64,7 @@ main h2 {
     margin-top: 30px;
 }
 
-
+/* container utilizado para centralizar conteudo */
 .container {
     width: 100%;
     max-width: 1200px; 
@@ -72,7 +73,7 @@ main h2 {
     box-sizing: border-box;
 }
 
-
+/* ordenação do header, centralizando itens */
 header {
     display: flex;
     align-items: center;
@@ -83,8 +84,17 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.marca { display: flex; align-items: center; gap: 15px; }
-.logo-img { width: 60px; height: auto; }
+/*estilo para a marca do cabeçalho */
+.marca { 
+    display: flex; 
+    align-items: center;
+    gap: 15px;
+}
+.logo-img { 
+    width: 60px;
+    height: auto; 
+}
+
 .titulo {
     font-family: var(--fonte-titulo);
     font-size: 2.2rem;
@@ -94,7 +104,13 @@ header {
     letter-spacing: 1px;
 }
 /* estilos para o menu de navegação */
-.menu-principal ul { display: flex; list-style: none; padding: 0; margin: 0; gap: 20px; }
+.menu-principal ul { 
+    display: flex; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    gap: 20px; 
+}
 .menu-principal a {
     text-decoration: none;
     color: var(--cor-texto);
@@ -103,12 +119,31 @@ header {
     text-transform: uppercase;
     transition: color 0.3s;
 }
-.menu-principal a:hover { color: var(--cor-hover); text-decoration: underline; }
+.menu-principal a:hover { 
+    color: var(--cor-hover);
+    text-decoration: underline; 
+}
 /* estilos para as ações do header (redes sociais e botões) */
-.acoes-header { display: flex; align-items: center; gap: 20px; }
-.redes-sociais { display: flex; gap: 10px; }
-.redes-sociais a { color: var(--cor-texto); font-size: 1.5rem; transition: transform 0.2s; } /* transição para os icones de redes sociais */
-.redes-sociais a:hover { transform: scale(1.2); color: var(--cor-botao-receita); }
+.acoes-header { 
+    display: flex;
+    align-items:
+    center; gap: 20px; 
+}
+.redes-sociais { 
+    display: flex;
+    gap: 10px;
+}
+
+/* transição para os icones de redes sociais, aumentando o tamanho quando o mouse passar por cima*/
+.redes-sociais a { 
+    color: var(--cor-texto); 
+    font-size: 1.5rem; transition:
+    transform 0.2s; 
+} 
+.redes-sociais a:hover { 
+    transform: scale(1.2); 
+    color: var(--cor-botao-receita); 
+}
 /* estilos para os botões do modelo e site em geral*/
 .botoes { display: flex; gap: 10px; }
 .btn {
@@ -120,10 +155,23 @@ header {
     transition: background 0.3s, transform 0.2s; /* transição suabe para os botões */
     border: 2px solid transparent;
 }
-.btn-login { border: 2px solid var(--cor-texto); color: var(--cor-texto); }
-.btn-login:hover { background-color: var(--cor-texto); color: #fff; } /* inverte as cores ao passar o mouse */
-.btn-receita { background-color: var(--cor-botao-receita); color: var(--cor-texto); box-shadow: 2px 2px 0px var(--cor-texto); }
-.btn-receita:hover { background-color: #d4a63e; transform: translateY(-2px); } /* sobe o botão ao passar o mouse */
+.btn-login { 
+    border: 2px solid var(--cor-texto);
+    color: var(--cor-texto);
+}
+ /* inverte as cores ao passar o mouse */
+.btn-login:hover { 
+    background-color: var(--cor-texto); 
+    color: #fff; 
+}
+.btn-receita { 
+    background-color: var(--cor-botao-receita); 
+    color: var(--cor-texto); 
+    box-shadow: 2px 2px 0px var(--cor-texto); 
+}
+.btn-receita:hover { 
+    background-color: #d4a63e; 
+    transform: translateY(-2px); } /* sobe o botão ao passar o mouse */
 
 /* estilo para o rodapé */
 footer {
@@ -133,28 +181,25 @@ footer {
     margin-top: auto;
     text-align: center;
 }
-
 .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
-
 .menu-footer a {
     color: var(--cor-texto-footer);
     text-decoration: none;
     margin: 0 10px;
     font-size: 0.9rem;
 }
-/* estilo para rodapé hover*/
+/* estilo para rodapé hover, sublinha ao passar o mouse*/
 .menu-footer a:hover {
     text-decoration: underline;
     color: var(--cor-botao-receita);
 }
 
 /* cadastro e login */
-
 .container-centralizado {
     display: flex;
     flex-direction: column;
@@ -171,14 +216,12 @@ footer {
     border-radius: 10px;
     text-align: center;
 }
-
 .form-container h1 {
     font-family: var(--fonte-receita); 
     font-size: 3rem;
     margin-bottom: 10px;
     color: var(--cor-texto);
 }
-
 .formulario-padrao {
     display: flex;
     flex-direction: column;
@@ -186,14 +229,12 @@ footer {
     margin-top: 20px;
     text-align: left;
 }
-
 .campo label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     font-size: 1.1rem; 
 }
-
 .campo input, .campo textarea, .campo select {
     width: 100%;
     padding: 12px;
@@ -203,53 +244,45 @@ footer {
     font-size: 1rem;
     box-sizing: border-box; /* Garantindo que o padding não estoure a box */
 }
-
 .campo input:focus {
     border-color: var(--cor-botao-receita); /* muda a cor quando clica*/
-    outline: none;
+    outline: none; /* remove a borda azul padrão */
 }
-
 .btn-full {
     width: 100%;
     margin-top: 10px;
     cursor: pointer;
     font-size: 1.2rem;
 }
-
 .acoes-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
-
 .link-esqueci {
     color: #888;
     font-size: 0.9rem;
     text-decoration: none;
 }
-
 .link-esqueci:hover {
     color: var(--cor-botao-receita);
     text-decoration: underline;
 }
-
 .rodape-form {
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #eee;
     font-size: 0.9rem;
 }
-
 .rodape-form a {
     color: var(--cor-texto);
     font-weight: bold;
 }
-/* estilo para o form de receita */
+/* estilo para o formulario de envio de receita */
 .form-largo {
     max-width: 800px; 
 }
-
 fieldset {
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -257,15 +290,13 @@ fieldset {
     margin-bottom: 25px;
     background-color: #fcfcfc;
 }
-
 legend {
     font-family: var(--fonte-receita); 
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     color: var(--cor-botao-receita);
     padding: 0 10px;
     font-weight: bold;
 }
-
 .duas-colunas {
     display: flex;
     gap: 20px;
@@ -273,21 +304,18 @@ legend {
 .duas-colunas .campo {
     flex: 1; /* Faz os dois ocuparem o mesmo tamanho */
 }
-
 .linha-ingrediente {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr; 
     gap: 10px;
     margin-bottom: 10px;
 }
-
 .header-ingrediente {
     font-weight: bold;
     font-size: 0.9rem;
     color: var(--cor-texto);
     margin-bottom: 5px;
 }
-
 .campo-checkbox {
     display: flex;
     align-items: center; 
@@ -295,7 +323,6 @@ legend {
     margin: 20px 0;
     text-align: left;
 }
-
 .campo-checkbox input {
     width: 20px;
     height: 20px;
@@ -317,7 +344,7 @@ legend {
     
     /* Sombra sólida deslocada (efeito Pop/Cartoon) */
     box-shadow: 8px 8px 0px rgba(0,0,0,0.15); 
-    overflow: hidden; /* Garante que nada vaze das bordas arredondadas */
+    overflow: hidden; /* esconde o vazamento*/
 }
 
 /* --- LADO ESQUERDO (TEXTO) --- */
@@ -358,8 +385,6 @@ legend {
     
     /* Sombra Sólida no Texto (Legibilidade e Estilo) */
     text-shadow: 3px 3px 0px var(--cor-texto); 
-    
-    /* TRUQUE DA SOBREPOSIÇÃO: */
     /* Margem negativa à direita puxa a caixa para cima da foto vizinha */
     margin-right: -80px; 
     
@@ -388,12 +413,12 @@ legend {
 }
 
 .estrelas-pop {
-    color: var(--cor-botao-receita); /* Estrelas Amarelas */
+    color: var(--cor-botao-receita); /* cor das estrelas da avaliação */
     font-size: 1.3rem;
 }
 
 .estrelas-pop span {
-    color: #666; /* Cor do texto "(45 votos)" */
+    color: #666; /* Cor dos votos" */
     font-size: 0.9rem;
     font-weight: bold;
     margin-left: 5px;
@@ -417,7 +442,6 @@ legend {
     /* Fica atrás do título (z-index menor que o do texto) */
     z-index: 1; 
 }
-
 .foto-pop img {
     width: 100%;
     height: 100%;
@@ -460,20 +484,18 @@ legend {
 }
 
 
-/* --- LISTA DE INGREDIENTES (Checkbox) --- */
+/* estilos para a lista de ingredientes */
 .lista-checkbox {
     list-style: none;
     padding: 25px 40px;
     margin: 0;
 }
-
 .lista-checkbox li {
     margin-bottom: 15px;
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
 .lista-checkbox input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -486,11 +508,9 @@ legend {
     flex-shrink: 0;
     position: relative;
 }
-
 .lista-checkbox input[type="checkbox"]:checked {
     background-color: var(--cor-texto);
 }
-
 .lista-checkbox input[type="checkbox"]:checked::after {
     content: '✔';
     color: #fff;
@@ -499,21 +519,18 @@ legend {
     transform: translate(-50%, -50%);
     font-size: 14px;
 }
-
 .lista-checkbox label {
     font-size: 1.2rem;
     cursor: pointer;
     font-family: var(--fonte-corpo);
 }
-
 .preco-ingrediente {
     font-size: 0.9rem;
     color: #666;
     font-style: italic;
     margin-left: 8px;
 }
-
-/* Efeito de Riscado */
+/* Efeito de Riscado quando o usuário clicar no checkbox */
 .lista-checkbox input:checked + label {
     text-decoration: line-through;
     color: #888;
@@ -521,15 +538,14 @@ legend {
 }
 
 
-/* --- VÍDEO --- */
+/* caixa de video */
 .video-container {
-    background-color: var(--cor-botao-login); /* Verde médio */
+    background-color: var(--cor-botao-login);
     padding: 30px;
     border-bottom: 3px solid var(--cor-texto);
     display: flex;
     justify-content: center;
 }
-
 .video-container iframe {
     width: 100%;
     max-width: 700px;
@@ -546,7 +562,6 @@ legend {
     padding: 30px 40px;
     margin: 0;
 }
-
 .lista-numerada li {
     position: relative;
     padding-left: 65px; /* Espaço para o quadrado amarelo */
@@ -555,34 +570,108 @@ legend {
     line-height: 1.6;
     font-family: var(--fonte-corpo);
 }
-
 /* O Quadrado Amarelo (Pseudo-elemento) */
 .lista-numerada li::before {
     counter-increment: contador-passos; /* Soma +1 */
-    content: counter(contador-passos);  /* Escreve o número */
-    
+    content: counter(contador-passos);  /* Escreve o número */    
     position: absolute;
     left: 0;
-    top: 0;
-    
+    top: 0;    
     width: 45px;
-    height: 45px;
-    
-    background-color: var(--cor-botao-receita); /* Fundo Amarelo */
-    color: var(--cor-texto); /* Texto Verde */
-    border: 2px solid var(--cor-texto);
-    
+    height: 45px;    
+    background-color: var(--cor-botao-receita);
+    color: var(--cor-texto); 
+    border: 2px solid var(--cor-texto);    
     /* Centralização do número */
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;    
     font-family: var(--fonte-receita);
     font-size: 1.8rem;
     font-weight: bold;
-    
-    /* Sombra sólida */
     box-shadow: 3px 3px 0px rgba(0,0,0,0.15);
+}
+
+.rodape-receita-card {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: var(--cor-fundo-header); /* Bege claro */
+    border: 3px solid var(--cor-texto);
+    border-radius: 12px;
+    
+    display: flex;
+    justify-content: space-between; /* Um bloco pra cada lado */
+    align-items: center;
+    flex-wrap: wrap; /* Para celular quebrar linha */
+    gap: 20px;
+}
+
+.rodape-receita-card h3 {
+    font-family: var(--fonte-receita);
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    color: var(--cor-texto);
+}
+
+/* --- BOTÕES DE COMPARTILHAR --- */
+.botoes-share {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-share {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Bolinha */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.btn-share:hover { transform: scale(1.1); }
+
+/* Cores das redes */
+.whatsapp { background-color: #25D366; }
+.facebook { background-color: #1877F2; }
+.twitter  { background-color: #1DA1F2; }
+
+
+/* --- ESTRELAS INTERATIVAS (O TRUQUE) --- */
+.estrelas-input {
+    display: flex;
+    flex-direction: row-reverse; /* Inverte a ordem visual (1 fica na esquerda) */
+    justify-content: flex-end; /* Alinha à esquerda visualmente */
+}
+
+/* Esconde as bolinhas de rádio originais */
+.estrelas-input input {
+    display: none;
+}
+
+/* Estilo das Estrelas (Labels) */
+.estrelas-input label {
+    font-size: 2rem;
+    color: #ccc; /* Cor cinza (desativada) */
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0 5px;
+}
+
+/* --- EFEITOS DE HOVER E CLICK --- */
+
+/* 1. Quando passar o mouse no label, ele e todos DEPOIS dele (na esquerda) ficam amarelos */
+.estrelas-input label:hover,
+.estrelas-input label:hover ~ label {
+    color: var(--cor-botao-receita); /* Amarelo */
+}
+
+/* 2. Quando clicar (checked), a estrela e as anteriores ficam amarelo escuro */
+.estrelas-input input:checked ~ label {
+    color: #d4a63e; /* Um amarelo mais forte para indicar voto computado */
 }
 
 /* responsividade */

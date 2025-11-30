@@ -116,7 +116,16 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Modo de Preparo</legend>                    
+                    <legend>Modo de Preparo</legend>
+                    <div class="campo">
+                        <label for="link-video">
+                            <i class="fa-brands fa-youtube" style="color: red;"></i> Link do Vídeo (Opcional):
+                        </label>
+                        <input type="url" id="link-video" name="video" placeholder="Cole o link do YouTube aqui (Ex: https://youtu.be/...)">
+                        <small style="color: #666; font-size: 0.8rem; display: block; margin-top: 5px;">
+                            Se tiver um vídeo, cole o link aqui que nós incorporamos na receita!
+                        </small>
+                    </div>             
                     <div class="campo">
                         <label>Passo 1:</label>
                         <textarea rows="2" placeholder="Comece por aqui..." required></textarea>
