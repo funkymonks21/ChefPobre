@@ -1,4 +1,6 @@
-/* Variáveis */
+/* =========================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GERAIS
+   ========================================= */
 :root {
     --cor-texto: #40513b;        
     --cor-fundo-header: #edf1d6; 
@@ -13,10 +15,10 @@
     --fonte-receita: 'Amatic SC', cursive;
     --fonte-corpo: 'Nunito', sans-serif;
 }
-/* geral */
-html{
+
+html {
     background-color: #d8dec0;
-     display: flex; 
+    display: flex; 
     justify-content: center; 
     min-height: 100vh; 
     width: 100%; 
@@ -29,7 +31,6 @@ body {
     width: 70%;
     max-width: 1400px;
     margin: 0 auto;
-    margin: 0;
     padding: 0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     
@@ -40,11 +41,10 @@ body {
 }
 
 main {
-    /* para deixar o main no centro, empurrando o footer para baixo da tela */
-    flex: 1; 
+    flex: 1; /* Empurra footer para baixo */
 }
 
-/* para todos os titulos e subtitulos */
+/* Tipografia Geral */
 main h1, main h2, main h3 {
     font-family: var(--fonte-receita);
     color: var(--cor-texto); 
@@ -54,7 +54,7 @@ main h1, main h2, main h3 {
 main h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    border-bottom: 2px dashed #ccc; /* "sublinhado" decorativo */
+    border-bottom: 2px dashed #ccc;
     padding-bottom: 10px;
 }
 
@@ -64,7 +64,6 @@ main h2 {
     margin-top: 30px;
 }
 
-/* container utilizado para centralizar conteudo */
 .container {
     width: 100%;
     max-width: 1200px; 
@@ -73,7 +72,10 @@ main h2 {
     box-sizing: border-box;
 }
 
-/* ordenação do header, centralizando itens */
+
+/* =========================================
+   2. HEADER E NAVEGAÇÃO
+   ========================================= */
 header {
     display: flex;
     align-items: center;
@@ -84,7 +86,6 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/*estilo para a marca do cabeçalho */
 .marca { 
     display: flex; 
     align-items: center;
@@ -103,7 +104,7 @@ header {
     margin: 0;
     letter-spacing: 1px;
 }
-/* estilos para o menu de navegação */
+
 .menu-principal ul { 
     display: flex; 
     list-style: none; 
@@ -111,6 +112,7 @@ header {
     margin: 0; 
     gap: 20px; 
 }
+
 .menu-principal a {
     text-decoration: none;
     color: var(--cor-texto);
@@ -123,28 +125,28 @@ header {
     color: var(--cor-hover);
     text-decoration: underline; 
 }
-/* estilos para as ações do header (redes sociais e botões) */
+
 .acoes-header { 
     display: flex;
-    align-items:
-    center; gap: 20px; 
+    align-items: center; 
+    gap: 20px; 
 }
 .redes-sociais { 
     display: flex;
     gap: 10px;
 }
 
-/* transição para os icones de redes sociais, aumentando o tamanho quando o mouse passar por cima*/
 .redes-sociais a { 
     color: var(--cor-texto); 
-    font-size: 1.5rem; transition:
-    transform 0.2s; 
+    font-size: 1.5rem; 
+    transition: transform 0.2s; 
 } 
 .redes-sociais a:hover { 
     transform: scale(1.2); 
     color: var(--cor-botao-receita); 
 }
-/* estilos para os botões do modelo e site em geral*/
+
+/* Botões Globais */
 .botoes { display: flex; gap: 10px; }
 .btn {
     text-decoration: none;
@@ -152,14 +154,13 @@ header {
     border-radius: 5px;
     font-weight: bold;
     font-size: 0.9rem;
-    transition: background 0.3s, transform 0.2s; /* transição suabe para os botões */
+    transition: background 0.3s, transform 0.2s;
     border: 2px solid transparent;
 }
 .btn-login { 
     border: 2px solid var(--cor-texto);
     color: var(--cor-texto);
 }
- /* inverte as cores ao passar o mouse */
 .btn-login:hover { 
     background-color: var(--cor-texto); 
     color: #fff; 
@@ -171,9 +172,13 @@ header {
 }
 .btn-receita:hover { 
     background-color: #d4a63e; 
-    transform: translateY(-2px); } /* sobe o botão ao passar o mouse */
+    transform: translateY(-2px); 
+}
 
-/* estilo para o rodapé */
+
+/* =========================================
+   3. RODAPÉ (FOOTER)
+   ========================================= */
 footer {
     background-color: var(--cor-fundo-footer);
     color: var(--cor-texto-footer);
@@ -193,13 +198,15 @@ footer {
     margin: 0 10px;
     font-size: 0.9rem;
 }
-/* estilo para rodapé hover, sublinha ao passar o mouse*/
 .menu-footer a:hover {
     text-decoration: underline;
     color: var(--cor-botao-receita);
 }
 
-/* cadastro e login */
+
+/* =========================================
+   4. FORMULÁRIOS (LOGIN, CADASTRO, ENVIO)
+   ========================================= */
 .container-centralizado {
     display: flex;
     flex-direction: column;
@@ -212,7 +219,7 @@ footer {
     margin: 40px auto;
     padding: 30px;
     background-color: #fff;
-    border: 2px dashed #ccc; /* Borda pontilhada e fundo branco estilo caderno */
+    border: 2px dashed #ccc;
     border-radius: 10px;
     text-align: center;
 }
@@ -242,11 +249,11 @@ footer {
     border-radius: 5px;
     font-family: var(--fonte-corpo); 
     font-size: 1rem;
-    box-sizing: border-box; /* Garantindo que o padding não estoure a box */
+    box-sizing: border-box;
 }
 .campo input:focus {
-    border-color: var(--cor-botao-receita); /* muda a cor quando clica*/
-    outline: none; /* remove a borda azul padrão */
+    border-color: var(--cor-botao-receita);
+    outline: none;
 }
 .btn-full {
     width: 100%;
@@ -279,10 +286,9 @@ footer {
     color: var(--cor-texto);
     font-weight: bold;
 }
-/* estilo para o formulario de envio de receita */
-.form-largo {
-    max-width: 800px; 
-}
+
+/* Formulário de Envio de Receita */
+.form-largo { max-width: 800px; }
 fieldset {
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -297,13 +303,8 @@ legend {
     padding: 0 10px;
     font-weight: bold;
 }
-.duas-colunas {
-    display: flex;
-    gap: 20px;
-}
-.duas-colunas .campo {
-    flex: 1; /* Faz os dois ocuparem o mesmo tamanho */
-}
+.duas-colunas { display: flex; gap: 20px; }
+.duas-colunas .campo { flex: 1; }
 .linha-ingrediente {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr; 
@@ -323,45 +324,36 @@ legend {
     margin: 20px 0;
     text-align: left;
 }
-.campo-checkbox input {
-    width: 20px;
-    height: 20px;
-}
+.campo-checkbox input { width: 20px; height: 20px; }
 
-/* --- CONTAINER DO HEADER (GRID) --- */
+
+/* =========================================
+   5. PÁGINA DE RECEITA INDIVIDUAL (POP STYLE)
+   ========================================= */
 .card-receita-pop {
     display: grid;
-    /* 45% texto, 55% foto. O texto precisa ser larguinho para o titulo caber bem */
     grid-template-columns: 45% 55%; 
-    
     background-color: #fff;
-    border: 3px solid var(--cor-texto); /* Borda verde grossa */
-    border-radius: 12px; /* Cantos arredondados */
+    border: 3px solid var(--cor-texto);
+    border-radius: 12px;
     margin-bottom: 50px;
-    
-    /* Configuração para camadas (z-index) funcionarem */
     position: relative; 
-    
-    /* Sombra sólida deslocada (efeito Pop/Cartoon) */
     box-shadow: 8px 8px 0px rgba(0,0,0,0.15); 
-    overflow: hidden; /* esconde o vazamento*/
+    overflow: hidden;
 }
 
-/* --- LADO ESQUERDO (TEXTO) --- */
+/* Lado Esquerdo (Texto) */
 .info-lado-esquerdo {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    
-    /* IMPORTANTE: Isso garante que o texto fique POR CIMA da foto na sobreposição */
-    z-index: 10; 
+    justify-content: center;
+    z-index: 10;
 }
 
-/* A Tag "Café da Manhã" */
 .tag-categoria {
     display: inline-block;
-    background-color: var(--cor-texto); /* Verde Escuro */
+    background-color: var(--cor-texto);
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
@@ -369,99 +361,76 @@ legend {
     font-size: 0.8rem;
     border-radius: 4px;
     margin-bottom: 15px;
-    align-self: flex-start; /* Alinha à esquerda */
+    align-self: flex-start;
 }
 
-/* --- O TÍTULO SOBREPOSTO (A Mágica) --- */
+/* Título Sobreposto */
 .titulo-pop-container h1 {
-    font-family: var(--fonte-receita); /* Fonte Amatic SC */
-    font-size: 4rem; /* Bem grande */
+    font-family: var(--fonte-receita);
+    font-size: 4rem;
     line-height: 1;
-    color: #fff; /* Texto Branco */
-    
-    /* O Fundo Amarelo */
+    color: #fff;
     background-color: var(--cor-botao-receita); 
     padding: 10px 20px;
-    
-    /* Sombra Sólida no Texto (Legibilidade e Estilo) */
     text-shadow: 3px 3px 0px var(--cor-texto); 
-    /* Margem negativa à direita puxa a caixa para cima da foto vizinha */
-    margin-right: -80px; 
-    
-    /* Sombra na caixa amarela */
+    margin-right: -80px; /* Sobreposição */
     box-shadow: 6px 6px 0px rgba(0,0,0,0.15);
-    
-    /* Leve rotação para ficar descolado */
     transform: rotate(-1.5deg); 
-    
     margin-top: 0;
     margin-bottom: 0;
 }
 
-/* Informações abaixo do título */
 .meta-dados {
     margin-top: 25px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-
 .custo-box {
     font-size: 1.2rem;
     color: var(--cor-texto);
     font-family: var(--fonte-corpo);
 }
-
 .estrelas-pop {
-    color: var(--cor-botao-receita); /* cor das estrelas da avaliação */
+    color: var(--cor-botao-receita);
     font-size: 1.3rem;
 }
-
 .estrelas-pop span {
-    color: #666; /* Cor dos votos" */
+    color: #666;
     font-size: 0.9rem;
     font-weight: bold;
     margin-left: 5px;
 }
-
 .intro-texto {
     margin-top: 20px;
-    font-family: var(--fonte-corpo); /* Nunito */
+    font-family: var(--fonte-corpo);
     line-height: 1.6;
     color: #555;
     font-size: 1.1rem;
 }
 
-/* --- LADO DIREITO (FOTO) --- */
+/* Lado Direito (Foto) */
 .foto-pop {
     position: relative;
     height: 100%;
-    min-height: 450px; /* Garante altura para o banner */
+    min-height: 450px;
     border-left: 3px solid var(--cor-texto);
-    
-    /* Fica atrás do título (z-index menor que o do texto) */
     z-index: 1; 
 }
 .foto-pop img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Corta a imagem para preencher sem esticar */
+    object-fit: cover;
     display: block;
 }
 
-
-/* =========================================
-   SEÇÕES DE LISTAS (Ingredientes e Preparo)
-   ========================================= */
-
+/* Seções de Listas e Checkboxes */
 .secao-lista {
     border: 3px solid var(--cor-texto);
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 40px;
 }
-
-/* Títulos das Faixas (Amarelo com texto Verde) */
 .titulo-faixa {
     background-color: var(--cor-botao-receita);
     color: var(--cor-texto);
@@ -472,19 +441,9 @@ legend {
     text-align: center;
     border-bottom: 3px solid var(--cor-texto);
 }
+.fundo-ingredientes { background-color: #d6e4c8; }
+.fundo-preparo { background-color: #fff; }
 
-/* Fundo Verde Claro para Ingredientes */
-.fundo-ingredientes {
-    background-color: #d6e4c8; 
-}
-
-/* Fundo Branco para Modo de Preparo */
-.fundo-preparo {
-    background-color: #fff;
-}
-
-
-/* estilos para a lista de ingredientes */
 .lista-checkbox {
     list-style: none;
     padding: 25px 40px;
@@ -508,9 +467,7 @@ legend {
     flex-shrink: 0;
     position: relative;
 }
-.lista-checkbox input[type="checkbox"]:checked {
-    background-color: var(--cor-texto);
-}
+.lista-checkbox input[type="checkbox"]:checked { background-color: var(--cor-texto); }
 .lista-checkbox input[type="checkbox"]:checked::after {
     content: '✔';
     color: #fff;
@@ -530,15 +487,13 @@ legend {
     font-style: italic;
     margin-left: 8px;
 }
-/* Efeito de Riscado quando o usuário clicar no checkbox */
 .lista-checkbox input:checked + label {
     text-decoration: line-through;
     color: #888;
     opacity: 0.7;
 }
 
-
-/* caixa de video */
+/* Vídeo */
 .video-container {
     background-color: var(--cor-botao-login);
     padding: 30px;
@@ -554,26 +509,24 @@ legend {
     box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
 }
 
-
-/* --- LISTA NUMERADA ESTILOSA (Amarela) --- */
+/* Lista Numerada Amarela */
 .lista-numerada {
-    list-style: none; /* Remove numeração padrão */
-    counter-reset: contador-passos; /* Inicia contador */
+    list-style: none;
+    counter-reset: contador-passos;
     padding: 30px 40px;
     margin: 0;
 }
 .lista-numerada li {
     position: relative;
-    padding-left: 65px; /* Espaço para o quadrado amarelo */
+    padding-left: 65px;
     margin-bottom: 30px;
     font-size: 1.2rem;
     line-height: 1.6;
     font-family: var(--fonte-corpo);
 }
-/* O Quadrado Amarelo (Pseudo-elemento) */
 .lista-numerada li::before {
-    counter-increment: contador-passos; /* Soma +1 */
-    content: counter(contador-passos);  /* Escreve o número */    
+    counter-increment: contador-passos;
+    content: counter(contador-passos);
     position: absolute;
     left: 0;
     top: 0;    
@@ -582,7 +535,6 @@ legend {
     background-color: var(--cor-botao-receita);
     color: var(--cor-texto); 
     border: 2px solid var(--cor-texto);    
-    /* Centralização do número */
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -592,37 +544,30 @@ legend {
     box-shadow: 3px 3px 0px rgba(0,0,0,0.15);
 }
 
+/* Rodapé do Card da Receita */
 .rodape-receita-card {
     margin-top: 40px;
     padding: 30px;
-    background-color: var(--cor-fundo-header); /* Bege claro */
+    background-color: var(--cor-fundo-header);
     border: 3px solid var(--cor-texto);
     border-radius: 12px;
-    
     display: flex;
-    justify-content: space-between; /* Um bloco pra cada lado */
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Para celular quebrar linha */
+    flex-wrap: wrap;
     gap: 20px;
 }
-
 .rodape-receita-card h3 {
     font-family: var(--fonte-receita);
     font-size: 1.8rem;
     margin: 0 0 10px 0;
     color: var(--cor-texto);
 }
-
-/* --- BOTÕES DE COMPARTILHAR --- */
-.botoes-share {
-    display: flex;
-    gap: 10px;
-}
-
+.botoes-share { display: flex; gap: 10px; }
 .btn-share {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Bolinha */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -631,64 +576,176 @@ legend {
     font-size: 1.2rem;
     transition: transform 0.2s;
 }
-
 .btn-share:hover { transform: scale(1.1); }
-
-/* Cores das redes */
 .whatsapp { background-color: #25D366; }
 .facebook { background-color: #1877F2; }
 .twitter  { background-color: #1DA1F2; }
 
-
-/* --- ESTRELAS INTERATIVAS (O TRUQUE) --- */
+/* Estrelas Interativas */
 .estrelas-input {
     display: flex;
-    flex-direction: row-reverse; /* Inverte a ordem visual (1 fica na esquerda) */
-    justify-content: flex-end; /* Alinha à esquerda visualmente */
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
-
-/* Esconde as bolinhas de rádio originais */
-.estrelas-input input {
-    display: none;
-}
-
-/* Estilo das Estrelas (Labels) */
+.estrelas-input input { display: none; }
 .estrelas-input label {
     font-size: 2rem;
-    color: #ccc; /* Cor cinza (desativada) */
+    color: #ccc;
     cursor: pointer;
     transition: color 0.2s;
     padding: 0 5px;
 }
-
-/* --- EFEITOS DE HOVER E CLICK --- */
-
-/* 1. Quando passar o mouse no label, ele e todos DEPOIS dele (na esquerda) ficam amarelos */
 .estrelas-input label:hover,
-.estrelas-input label:hover ~ label {
-    color: var(--cor-botao-receita); /* Amarelo */
+.estrelas-input label:hover ~ label { color: var(--cor-botao-receita); }
+.estrelas-input input:checked ~ label { color: #d4a63e; }
+
+
+/* =========================================
+   6. PÁGINA DE CATEGORIA (CARDS POLAROID)
+   ========================================= */
+
+.header-categoria {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px dashed #ccc;
 }
 
-/* 2. Quando clicar (checked), a estrela e as anteriores ficam amarelo escuro */
-.estrelas-input input:checked ~ label {
-    color: #d4a63e; /* Um amarelo mais forte para indicar voto computado */
+.header-categoria h1 {
+    font-family: var(--fonte-receita);
+    font-size: 3.5rem;
+    color: var(--cor-texto);
+    margin-bottom: 10px;
 }
 
-/* responsividade */
+.barra-filtros {
+    margin-top: 20px;
+    font-family: var(--fonte-corpo);
+}
+.barra-filtros select {
+    padding: 5px;
+    border: 2px solid var(--cor-texto);
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+/* --- GRID DE RECEITAS --- */
+/* ATENÇÃO: Aqui estava o problema. Precisamos ativar o GRID na base */
+.grade-receitas {
+    display: grid;
+    gap: 40px; /* Espaço entre os cards */
+    padding: 20px 0;
+    
+    /* Configuração Padrão (Mobile): 1 Coluna */
+    grid-template-columns: 1fr;
+}
+
+/* Configuração para PC: 2 Colunas Fixas */
+@media (min-width: 768px) {
+    .grade-receitas {
+        grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+        max-width: 900px; 
+        margin: 0 auto; 
+    }
+}
+
+/* Card Polaroid */
+.card-polaroid {
+    position: relative;
+    transition: transform 0.3s;
+}
+.card-polaroid:hover {
+    transform: translateY(-10px) rotate(1deg);
+    z-index: 2;
+}
+.card-polaroid a {
+    text-decoration: none;
+    display: block;
+}
+.foto-moldura {
+    margin: 0;
+    border: 3px solid var(--cor-texto);
+    background-color: #fff;
+    padding: 10px 10px 50px 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+    transform: rotate(-1deg);
+    transition: box-shadow 0.3s;
+}
+.card-polaroid:hover .foto-moldura { box-shadow: 10px 10px 0px rgba(0,0,0,0.2); }
+.foto-moldura img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #eee;
+}
+.fita-titulo {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(2deg);
+    background-color: var(--cor-botao-receita);
+    color: var(--cor-texto);
+    font-family: var(--fonte-receita);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 20px;
+    white-space: nowrap;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+    z-index: 10;
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+.info-polaroid {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--fonte-receita);
+    font-size: 1.2rem;
+    color: #555;
+    z-index: 5;
+}
+.estrelas-mini { color: var(--cor-botao-receita); }
+
+
+/* =========================================
+   7. RESPONSIVIDADE E IMPRESSÃO
+   ========================================= */
+
 @media (max-width: 900px) {
     header { flex-direction: column; gap: 20px; padding: 20px; }
     .menu-principal ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
-    /* corpo volta a ocupar toda a tela */
+    
     body {
         width: 100%;
         margin: 0;
         box-shadow: none;
     }
+    
+    /* Ajustes da Receita no Celular */
+    .card-receita-pop {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .titulo-pop-container h1 {
+        margin-right: 0;
+        font-size: 2.5rem;
+    }
+    .foto-pop {
+        height: 250px;
+        min-height: 250px;
+        border-left: none;
+        border-top: 3px solid var(--cor-texto);
+        order: -1;
+    }
 }
 
-
-/* impressão */
 @media print {
-    header, footer, .botoes-sociais { display: none; }
-    body { background-color: white; color: black; }
+    header, footer, .botoes-sociais, .acoes-header { display: none; }
+    body { background-color: white; color: black; width: 100%; margin: 0; }
+    .card-receita-pop, .secao-lista { border: 1px solid #000; box-shadow: none; }
+    a { color: black; text-decoration: none; }
 }
