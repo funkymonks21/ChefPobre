@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chef Pobre</title>    
+    <title>Sobre nós | Chef Pobre</title>    
     <!-- Fontes do Google, usada no logo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +15,10 @@
 <body>
     <header>
         <div class="marca">
-            <img src="img/logopng.png" alt="Logo Chapéu de Chef" class="logo-img">
+            <img src="img/logopng.png" alt="Logo Chapéu de Chef com símbolo indicando sem dinheiro" class="logo-img">
             <a href="index.html" class="titulo">Chef Pobre</a>
         </div>
+
         <nav class="menu-principal">
             <ul>
                 <li><a href="cafedamanha.html">Café da Manhã</a></li>
@@ -25,6 +26,7 @@
                 <li><a href="jantarromantico.html">Jantar</a></li> 
             </ul>
         </nav>
+
         <div class="acoes-header">
             <div class="redes-sociais">
                 <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -36,21 +38,32 @@
             </div>
         </div>
     </header>
-    <main class="container-centralizado">  
-        <section class="form-container">
-            <h1>Esqueceu da senha?</h1>
-            <p>Não se preocupe, acontece com os melhores chefs! Digite seu e-mail abaixo e nós te ajudamos a recuperar.</p>
-            <form action="login.html" class="formulario-padrao">                
-                <div class="campo">
-                    <label for="email-recuperar">E-mail Cadastrado:</label>
-                    <input type="email" id="email-recuperar" name="email" placeholder="ex: chef@cozinha.com" required>
+
+    <main class="container">
+        <section class="card-receita-pop card-invertido">
+            <div class="foto-pop">
+                <img src="img/equipe.png" alt="Equipe Cozinha Pobre">
+            </div>
+            <div class="info-lado-esquerdo">
+                
+                <span class="tag-categoria">Quem Somos</span>
+                <h1>Por que o "Chef Pobre"?</h1>                
+                <div class="intro-texto">
+                    <p>
+                        Tudo começou quando olhamos para a nossa conta bancária e depois para a nossa fome. A conta estava zerada, mas a vontade de comer bem era gigante.
+                    </p>
+                    <p>
+                        Cansamos de sites de receitas que pedem ingredientes que a gente nem sabe pronunciar o nome. Acreditamos que a verdadeira gastronomia não está no preço do ingrediente, mas no <strong>amor e na criatividade</strong>.
+                    </p>
+                    <p>
+                        Nosso objetivo é provar que dá para fazer um jantar de rei com o orçamento de um plebeu. Aqui, a sobra de ontem vira o banquete de hoje.
+                    </p>
+                    <br>
+                    <p style="font-family: var(--fonte-receita); font-size: 1.5rem;">
+                        Com fome e sem dinheiro,<br>
+                        <strong>A Equipe.</strong>
+                    </p>
                 </div>
-                <button type="submit" class="btn btn-receita btn-full">
-                    <i class="fa-solid fa-paper-plane"></i> Enviar Link de Recuperação
-                </button>
-            </form>
-            <div class="rodape-form">
-                <p>Lembrou a senha? <a href="login.html">Voltar para o Login</a></p>
             </div>
         </section>
     </main>
