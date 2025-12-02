@@ -428,8 +428,16 @@ legend {
     clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
 }
 .info-polaroid {
-    position: absolute; bottom: 15px; left: 20px; right: 20px; display: flex; justify-content: space-between;
-    font-family: var(--fonte-receita); font-size: 1.2rem; color: #555; z-index: 5;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--fonte-receita);
+    font-size: 1.2rem;
+    color: #555;
+    z-index: 5;
 }
 
 
