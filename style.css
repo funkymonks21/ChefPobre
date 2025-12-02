@@ -241,6 +241,40 @@ legend {
     color: var(--cor-texto); 
     margin-bottom: 5px; 
 }
+.acoes-form {
+    display: flex;
+    flex-direction: column; /* Coloca um embaixo do outro */
+    align-items: center;    /* Centraliza na horizontal */
+    gap: 15px;              /* Espaço entre botão e link */
+    width: 100%;
+}
+.link-esqueci {
+    color: #888;
+    font-size: 0.9rem;
+    text-decoration: none; 
+    font-family: var(--fonte-corpo);
+}
+
+.link-esqueci:hover {
+    color: var(--cor-botao-receita);
+    text-decoration: underline;
+}
+.rodape-form {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #ccc;
+    font-size: 0.9rem;
+    color: #555;
+}
+.rodape-form a {
+    color: var(--cor-texto);
+    font-weight: bold;
+    text-decoration: none;
+}
+.rodape-form a:hover {
+    color: var(--cor-botao-receita);
+    text-decoration: underline;
+}
 
 /* 6. PÁGINA DE RECEITA) */
 .card-receita-pop {
@@ -649,6 +683,15 @@ legend {
 .tabela-ranking td, .tabela-usuarios td { 
     border-bottom: 1px solid #eee;
     padding: 10px 5px;
+}
+.tabela-ranking a, .tabela-usuarios a{
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: color 0.3s;
+}
+.tabela-ranking a:hover, .tabela-usuarios a:hover {
+    color: var(--cor-botao-receita);
+    text-decoration: underline;
 }
 .user-avatar { 
     width: 50px;
