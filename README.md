@@ -14,17 +14,17 @@ Abaixo segue alguns relatórios do lightroom
 
 [Relatório](https://pagespeed.web.dev/analysis/https-funkymonks21-github-io-ChefPobre-index-html/x1xvznpph8?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=pt-PT&utm_source=lh-chrome-ext)
 
-![Lightroom index.html](\img\light_index.png)
+![Lightroom index.html](/img/light_index.png)
 
 #### Lightroom index.html - Mobile
 
 [Relatório](https://pagespeed.web.dev/analysis/https-funkymonks21-github-io-ChefPobre-index-html/a24hg6xll9?form_factor=mobile&category=performance&category=accessibility&category=best-practices&category=seo&hl=pt-PT&utm_source=lh-chrome-ext)
 
-![Lightroom index.html mobile](\img\light_index_mobile.png)
+![Lightroom index.html mobile](/img/light_index_mobile.png)
 
 #### Lightroom enviesuareceita.html
 
-![Lightroom enviesuareceita.html](\img\light_envie.png)
+![Lightroom enviesuareceita.html](/img/light_envie.png)
 
 ### W3C Validator
 
@@ -32,15 +32,15 @@ Abaixo segue algumas validações no W3C
 
 #### W3C index.html
 
-![Validação do index.html](\img\validacao_index.png)
+![Validação do index.html](/img/validacao_index.png)
 
 #### W3C enviesuareceita.html
 
-![Validação do envie sua receita](\img\validacao_envie.png)
+![Validação do envie sua receita](/img/validacao_envie.png)
 
 #### W3C churraspobre.html
 
-![Validação churraspobre](\img\churraspobre.png)
+![Validação churraspobre](/img/churraspobre.png)
 
 ## Processo de construção do site
 
